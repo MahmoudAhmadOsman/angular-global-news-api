@@ -14,10 +14,12 @@ export class UserDetailsComponent implements OnInit {
   constructor(private usersService: UsersService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log("Pramiterized User Details Router: ", this.route.snapshot.params['id']);
+    this.showUserDetails();
+  }
 
+  showUserDetails() {
+    console.log("Pramiterized User Details Route: ", this.route.snapshot.params['id']);
     const id = this.route.snapshot.params['id'];
-
     this.usersService.getUserById(id).subscribe(data => {
       this.userDetails = data;
 
@@ -25,7 +27,10 @@ export class UserDetailsComponent implements OnInit {
     }, (error) => {
       console.log("Error occured while fetching user details", error.message)
     })
+}
 
-  }
+
+
+
 
 }
