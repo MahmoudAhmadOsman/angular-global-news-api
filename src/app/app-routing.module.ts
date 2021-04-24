@@ -10,10 +10,14 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path:"news-details/:id", component: NewsDetailsComponent},
   { path: "about", component: AboutComponent },
-  { path: "user-details/:id", component: UserDetailsComponent },
-  {path:"users", component: UsersComponent},
+  {
+    path: "users", children: [
+      { path: '', component: UsersComponent },
+      { path: "user-details/:id", component: UserDetailsComponent },
+    
+    ]
+  },
 
- 
 ];
 
 @NgModule({
