@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
       console.log(users)
 
     }, (error) => {
-      console.log("There is an error: ", error);
+      console.log("There is an error: ", error.message);
 
     }
     );

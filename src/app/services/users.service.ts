@@ -17,23 +17,10 @@ export class UsersService {
   }
 
 
-
+  //Get user by it
   getUserById(id: number) {
-    // const baseUrl = "https://jsonplaceholder.typicode.com/users/";
-    // return this.http.get(`${this.baseUrl}/${id}`);
     return this.http.get("https://jsonplaceholder.typicode.com/users/"+ id);
   }
-
-
-
-
-//   getNewsByTitle(id: number) {
-//     return this.http.get("https://newsapi.org/v2/everything?q=apple&from=2021-04-23&to=2021-04-23&sortBy=popularity&apiKey=b35173cf3f7c41e7aac71253aaeee113/" + id);
-// }
-
-
-
-
 
 
 }
