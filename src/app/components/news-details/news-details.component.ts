@@ -1,3 +1,5 @@
+import { NewsapiService } from './../../services/newsapi.service';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsDetailsComponent implements OnInit {
 
-  constructor() { }
+  public newsDetails: any;
+ public errorMessage: [];
+  constructor(private route: ActivatedRoute, private newsapi: NewsapiService) { }
 
   ngOnInit(): void {
+    console.log("Pramiterized Router: ", this.route.snapshot.params['id'])
+   
+    const id = this.route.snapshot.params['id'];
+
+    this.newsapi.getNewsByTitle(id).subscribe(data => {
+      console.log("News Details: ", data)
+      this.newsDetails.source = data;
+      
+    }, (error: any) => {
+       this.errorMessage =  error.message
+    
+      console.log("News Details Error: ", error.message)
+    })
   }
 
 }

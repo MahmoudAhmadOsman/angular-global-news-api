@@ -1,5 +1,6 @@
 import { NewsapiService } from './../../services/newsapi.service';
 import { Component, OnInit } from '@angular/core';
+ 
 
 @Component({
   selector: 'app-home',
@@ -13,14 +14,18 @@ export class HomeComponent implements OnInit {
   constructor(private NewsapiService: NewsapiService) {
     
     NewsapiService.getNewsList().subscribe((data) => {
-      this.news = data.articles;
-      console.log("ALL NEWS: ", data);
+       this.news = data.articles;
+     
+      console.log("ALL NEWS DATA ARRAYS: ", data.articles);
 
     }, (error) => {
       console.log("An error: ", error);
     })
 
   }
+
+  //Pramiterized Router
+
 
 
  
@@ -31,6 +36,8 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    // console.log("Pramiterized Router: ", this.route.snapshot.params['title'])
+    // const title = this.route.snapshot.params['title'];
   }
 
 }

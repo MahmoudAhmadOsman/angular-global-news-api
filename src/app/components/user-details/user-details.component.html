@@ -1,0 +1,31 @@
+<section class="user_details_container">
+  <div class="container">
+      <a href="/users" class="fa fa-chevron-left btn btn-danger"> Go back</a>
+    <h3>Details of <small>{{userDetails.name}}</small></h3>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <img
+            class="card-img-top thumbnail"
+            src="https://gravatar.com/avatar/a68951a9af24db7d6a19224a64d4fc70?s=400&d=robohash&r=pg"
+            alt="{{userDetails.name}}"
+          />
+          <div class="card-body">
+            <h3 class="card-title">Full Name: {{userDetails.name}}</h3>
+            <p class="card-text"><b>Username: </b>{{userDetails.username}}</p>
+            <p class="card-text"><b>Email Address: </b>{{userDetails.email}}</p>
+            <p class="card-text">
+              <b>Street: </b>{{userDetails.address.street}}
+            </p>
+            <p class="card-text"><b>Suite: </b>{{userDetails.address.suite}}</p>
+            <p class="card-text"><b>City: </b>{{userDetails.address.city}}</p>
+            <p class="card-text">
+              <b>Zip Code: </b>{{userDetails.address.zipcode}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

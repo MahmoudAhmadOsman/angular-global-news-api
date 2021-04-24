@@ -1,11 +1,12 @@
 <section class="home_news">
   <div class="container">
-    <h1>BREAKING NEWS</h1>
+    <h1 class="text-danger">BREAKING NEWS</h1>
     <hr />
     <div class="row">
       <div class="col-md-4 mb-4" *ngFor="let new of news">
         <div class="card">
-          <a href={{new.id}}>
+          <!-- <h1 class="text-danger">Name: {{new.source.id}}</h1> -->
+          <a [routerLink]="['/news-details', new.source.id]">
             <img
               src="{{new.urlToImage}}"
               class="card-img-top"
@@ -13,12 +14,18 @@
             />
           </a>
           <div class="card-body">
-            <a href="#"> <h5 class="card-title">{{new.title }}</h5></a>
+            <a [routerLink]="['/news-details', new.source.id]">
+              <h2 class="card-title">{{new.title }}</h2>
+            </a>
             <p>{{new.description}}</p>
             <p class="card-text">
               {{new.author }} | {{new.publishedAt | date}}
             </p>
-            <a href="#" class="btn btn-primary">Read More...</a>
+            <a
+              class="btn btn-primary"
+              [routerLink]="['/news-details', new.title]"
+              >Read More...</a
+            >
           </div>
         </div>
       </div>
