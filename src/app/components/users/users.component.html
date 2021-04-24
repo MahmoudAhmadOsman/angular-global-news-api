@@ -13,11 +13,11 @@
                 <th>Full Name</th>
                 <th>UserName</th>
                 <th>Email</th>
-
                 <th>Address & Street</th>
                 <th>Suite</th>
                 <th>City</th>
                 <th>Zip Code</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -30,8 +30,12 @@
                 <td>{{user.address.suite}}</td>
                 <td>{{user.address.city}}</td>
                 <td>{{user.address.zipcode}}</td>
+
                 <td>
-                  <a [routerLink]="['/user-details', user.id]" title="View"
+                  <a
+                    class="btn btn-success btn-sm"
+                    [routerLink]="['/user-details', user.id]"
+                    title="View"
                     ><i class="fa fa-eye" aria-hidden="true"></i
                   ></a>
                 </td>
