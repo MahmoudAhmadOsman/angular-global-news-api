@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewsDetailsComponent } from './components/news-details/news-details.component';
 import { UsersComponent } from './components/users/users.component';
+import { PodcastsComponent } from './components/podcasts/podcasts.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,8 +15,10 @@ const routes: Routes = [
     path: "users", children: [
       { path: '', component: UsersComponent },
       { path: "user-details/:id", component: UserDetailsComponent },
-    
     ]
+  },
+    {
+    path:"podcasts", component: PodcastsComponent
   },
 
 ];

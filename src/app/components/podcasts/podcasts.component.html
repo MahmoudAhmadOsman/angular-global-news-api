@@ -1,0 +1,67 @@
+<!--<div class="col-md-3" *ngFor="let podcast of listOfPodcast">  -->
+<main class="postcast_main_container">
+  <!-- Start of container -->
+  <div class="container" *ngFor="let podcast of listOfPodcast; let i = index">
+    <div class="showError" class="showError"
+      *ngIf="listOfPodcast.length > 0; else noPodcastData ">
+      <div class="row row_mb">
+        <div class="col-md-3">
+          <div class="dynamic_numbers">
+            <h3>{{i+1}}</h3>
+          </div>
+        </div>
+        <div class="col-md-3 shared_bg">
+          <div class="alexa-img">
+            <img
+              src="{{podcast.thumbnail}}"
+              alt="{{podcast.title}}"
+              draggable="false"
+            />
+          </div>
+        </div>
+        <div class="col-md-3 shared_bg">
+          <div class="authors-container">
+            <h3>{{podcast.title}}</h3>
+            <p>by <span>{{podcast.publisher}}</span></p>
+            <p class="episode">{{podcast.total_episodes}} &nbsp;episodes</p>
+            <hr />
+            <div class="author_images">
+              <a href="https://www.apple.com/itunes/" target="_blank">
+                <img
+                class="img-responsive"
+                  src="assets/images/svg/apple.svg"
+                  alt="{{podcast.title}}"
+                />
+
+                <small class="text-muted"> itunes</small></a
+              >
+
+              <a href="https://www.google.com/" target="_blank">
+                <img src="assets/images/svg/link.svg" alt="{{podcast.title}}" />
+                <small class="text-muted"> web</small>
+              </a>
+
+              <a href="https://rss.com/" target="_blank">
+                <img src="assets/images/svg/rss.svg" alt="{{podcast.title}}" />
+                <small class="text-muted"> rss</small></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 shared_bg">
+          <div class="right_container_text">
+            <p>{{podcast.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start of show error template -->
+    <ng-template #noPodcastData>
+      <div class="alert alert-danger">
+        <p class="text-center">{{errorMessage}}</p>
+      </div>
+    </ng-template>
+    <!-- End of show error template -->
+  </div>
+  <!-- End of container -->
+</main>
