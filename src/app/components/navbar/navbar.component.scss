@@ -1,7 +1,7 @@
 .main-nagivation {
     position: relative;
-
-    .navbar-brand {
+nav{
+      .navbar-brand {
         position: relative;
 
         img {
@@ -10,4 +10,11 @@
             margin-top: -25px;
         }
     }
+
+.navbar-nav{
+    text-transform: uppercase;
+}
+
+}
+  
 }
