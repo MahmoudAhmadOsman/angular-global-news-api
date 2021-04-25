@@ -2,8 +2,11 @@
 <main class="postcast_main_container">
   <!-- Start of container -->
   <div class="container" *ngFor="let podcast of listOfPodcast; let i = index">
-    <div class="showError" class="showError"
-      *ngIf="listOfPodcast.length > 0; else noPodcastData ">
+    <div
+      class="showError"
+      class="showError"
+      *ngIf="listOfPodcast.length > 0; else noPodcastData "
+    >
       <div class="row row_mb">
         <div class="col-md-3">
           <div class="dynamic_numbers">
@@ -28,22 +31,20 @@
             <div class="author_images">
               <a href="https://www.apple.com/itunes/" target="_blank">
                 <img
-                class="img-responsive"
                   src="assets/images/svg/apple.svg"
                   alt="{{podcast.title}}"
                 />
-
-                <small class="text-muted"> itunes</small></a
-              >
+                <small class="text-muted">&nbsp; itunes</small>
+              </a>
 
               <a href="https://www.google.com/" target="_blank">
                 <img src="assets/images/svg/link.svg" alt="{{podcast.title}}" />
-                <small class="text-muted"> web</small>
+                <small class="text-muted">&nbsp;  web</small>
               </a>
 
               <a href="https://rss.com/" target="_blank">
                 <img src="assets/images/svg/rss.svg" alt="{{podcast.title}}" />
-                <small class="text-muted"> rss</small></a
+                <small class="text-muted">&nbsp;  rss</small></a
               >
             </div>
           </div>

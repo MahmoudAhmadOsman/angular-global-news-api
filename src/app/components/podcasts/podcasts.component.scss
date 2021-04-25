@@ -104,8 +104,10 @@ $main_purple_color: #891f8e;
 
             .author_images {
                 position: relative;
-                padding: 0px;
-                margin: 0;
+                // padding: 0px;
+                // margin: 0;
+                display: flex;
+                justify-content: space-between;
 
                 img {
                     width: 15px;
