@@ -14,7 +14,8 @@ $main_purple_color: #891f8e;
 
     .shared_bg {
         position: relative;
-        height: 35vh;
+        max-height: 480px;
+        height: 385px;
         background-color: #fff;
         padding: 40px;
         box-shadow: 5px 7px 6px #b6444329;
@@ -79,9 +80,9 @@ $main_purple_color: #891f8e;
         /*Start of authors-container style*/
         .authors-container {
             width: auto;
-            height: auto;
+            // height:100%
             position: relative;
-            // background-color: #f00;
+            background-color: #fff;
 
 
             h3 {

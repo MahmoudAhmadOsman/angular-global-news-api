@@ -1,3 +1,4 @@
+import { ContactComponent } from './components/contact/contact.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,6 +21,7 @@ const routes: Routes = [
     {
     path:"podcasts", component: PodcastsComponent
   },
+  { path:"contact", component: ContactComponent}
 
 ];
 
