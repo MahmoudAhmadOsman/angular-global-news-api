@@ -15,6 +15,8 @@ export class PodcastsComponent implements OnInit {
     podcastService.getPodCastList().subscribe((data) => {
       console.log("PodCast Data: ", data.podcasts)
       this.listOfPodcast = data.podcasts;
+    }, (error) => {
+      console.log("Error: ", error)
     })
   }
 
