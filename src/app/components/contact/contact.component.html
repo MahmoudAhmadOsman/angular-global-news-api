@@ -9,11 +9,12 @@
             <label for="fullName">Full Name</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control input-lg"
               id="fullName"
               placeholder="Enter your full Name"
               name="fullName"
               required
+              [formControl]="fullName"
             />
           </div>
           <!-- User Name -->
@@ -21,18 +22,21 @@
             <label for="username">User Name</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control input-lg"
               id="username"
               placeholder="Enter your user name"
               name="username"
               required
+              [formControl]="username"
             />
           </div>
+          <p>Username: {{username.value}}</p>
+
           <div class="form-group">
             <label for="email">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="form-control input-lg"
               id="email"
               placeholder="Enter your email"
               name="email"
@@ -44,7 +48,7 @@
             <label for="pwd">Password</label>
             <input
               type="password"
-              class="form-control"
+              class="form-control input-lg"
               id="pwd"
               placeholder="Enter your password"
               name="pwd"
@@ -55,7 +59,7 @@
             <label for="confirmedPassword">Confirm Password</label>
             <input
               type="password"
-              class="form-control"
+              class="form-control input-lg"
               id="confirmedPassword"
               placeholder="Enter your password"
               name="confirmedPassword"
@@ -63,7 +67,10 @@
             />
           </div>
 
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Submit</button> &nbsp;
+          <button type="reset" class="btn btn-danger" (click)="reset()">
+            Reset
+          </button>
         </form>
       </div>
     </div>
