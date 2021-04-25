@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodcastsComponent implements OnInit {
 
+  public podcastTitle = "Lastest Podcasts";
   public listOfPodcast = [];
   constructor(private podcastService: PodcastService) {
     

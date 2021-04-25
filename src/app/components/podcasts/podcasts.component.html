@@ -1,5 +1,13 @@
 <!--<div class="col-md-3" *ngFor="let podcast of listOfPodcast">  -->
 <main class="postcast_main_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-danger text-center">{{podcastTitle}}</h1>
+      </div>
+    </div>
+  </div>
+
   <!-- Start of container -->
   <div class="container" *ngFor="let podcast of listOfPodcast; let i = index">
     <div
@@ -39,12 +47,12 @@
 
               <a href="https://www.google.com/" target="_blank">
                 <img src="assets/images/svg/link.svg" alt="{{podcast.title}}" />
-                <small class="text-muted">&nbsp;  web</small>
+                <small class="text-muted">&nbsp; web</small>
               </a>
 
               <a href="https://rss.com/" target="_blank">
                 <img src="assets/images/svg/rss.svg" alt="{{podcast.title}}" />
-                <small class="text-muted">&nbsp;  rss</small></a
+                <small class="text-muted">&nbsp; rss</small></a
               >
             </div>
           </div>
