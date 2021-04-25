@@ -8,6 +8,8 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  
+  //For form reset
   fullName = new FormControl("");
   username = new FormControl("");
   email = new FormControl("");
