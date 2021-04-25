@@ -5,7 +5,12 @@ $main_purple_color: #891f8e;
     height: auto;
     position: relative;
     display: block;
-    margin:  auto;
+    margin: auto;
+
+    h1 {
+        margin-bottom: 25px;
+
+    }
 
     .shared_bg {
         position: relative;
