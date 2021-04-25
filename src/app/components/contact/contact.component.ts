@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
 
 //Reset form values 
   reset() {
-    //instead of calling email field, call the entire user form
+    //instead of calling each field individually, call the entire user form
     // this.username.reset();
     // this.fullName.setValue("");
     // this.email.setValue("");
