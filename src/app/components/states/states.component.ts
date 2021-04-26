@@ -9,18 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class StatesComponent implements OnInit {
 
   public states: [];
-  public districts: [];
+  
   constructor(private stateService: StateService) {
     stateService.getAllStates().subscribe((data) => {
-    
       this.states = data;
-      console.log("All Data: ", data);
-      
-      
-      this.districts = data;
-
-      console.log("All Districts", data);
-
+      console.log("List of All Data: ", data);
   })
 
    }
