@@ -14,7 +14,10 @@ export class StatesComponent implements OnInit {
     stateService.getAllStates().subscribe((data) => {
       this.states = data;
       console.log("List of All Data: ", data);
-  })
+    }, (error) => {
+      console.log("An error has occured: ", error.message);
+
+    })
 
    }
 
