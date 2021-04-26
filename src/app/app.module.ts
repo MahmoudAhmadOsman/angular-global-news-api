@@ -14,6 +14,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { StatesComponent } from './components/states/states.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './components/contact/contact.component';
     UserDetailsComponent,
     PodcastsComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    StatesComponent
   ],
   imports: [
     BrowserModule,
