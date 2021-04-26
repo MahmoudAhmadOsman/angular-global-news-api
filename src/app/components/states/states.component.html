@@ -34,17 +34,19 @@
           />
           <div class="caption">
             <h2>{{state.banadir.city}}</h2>
-            <small><b>Knows as: </b>{{state.banadir.anotherName}}</small>
+            <small><b>Known as: </b>{{state.banadir.anotherName}}</small>
             <p><b>Population</b>: {{state.banadir.population | number}}</p>
             <p><b>Main Sources</b>: {{state.banadir.mainSources}}</p>
             <p><b>Governor Name</b>: {{state.banadir.governorName}}</p>
             <p><b>Number of Ports</b>: {{state.banadir.numberOfAirport}}</p>
-
-            <p><b>Number Of District</b>: {{state.banadir.numberOfDistrict}}</p>
-            <p><b>Number Of Beach</b>: {{state.banadir.numberOfBeach}}</p>
+            <p><b>Number of Airports</b>: {{state.banadir.numberOfAirport}}</p>
+            <p>
+              <b>Number Of Districts</b>: {{state.banadir.numberOfDistrict}}
+            </p>
+            <p><b>Number Of Beaches</b>: {{state.banadir.numberOfBeach}}</p>
             <p><b>Number of Miles</b>: {{state.banadir.milesSquare}} square</p>
             <hr />
-            <!-- <pre><b>Test</b>: {{state.hirshabelle.city | json }}</pre> -->
+            <!-- <pre><b></b>: {{state.banadir | json }}</pre> -->
 
             <button class="btn btn-primary">{{state.banadir.id}}</button>
           </div>
@@ -53,6 +55,7 @@
       <!-- Distracts -->
       <!-- let district of districts -->
       <div class="col-md-8" *ngFor="let state of states">
+        <h4>Names & Numbers of Districts</h4>
         <div class="table-responsive">
           <table class="table table-striped table-hover">
             <thead>
