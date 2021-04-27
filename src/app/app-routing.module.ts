@@ -29,7 +29,8 @@ const routes: Routes = [
   {
     path:"hirshabelle", component:HirshabelleComponent
   },
-  { path:"contact", component: ContactComponent}
+  { path: "contact", component: ContactComponent },
+  { path:"**", redirectTo:""} //Invalid Route
 
 ];
 
