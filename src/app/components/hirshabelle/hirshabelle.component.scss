@@ -1,9 +1,20 @@
-.hirshabelle_list{
+.hirshabelle_list {
     position: relative;
-    .thumbnail{
+
+    .thumbnail {
         position: relative;
-        img{
-            width:640px
+
+        img {
+            width: 640px
         }
     }
+
+
+button.btn-primary {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
+}
+
+
