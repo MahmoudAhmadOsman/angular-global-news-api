@@ -26,17 +26,18 @@
     <h4>About Somalia States</h4>
     <hr />
     <!-- Bring the breadcrub links here -->
+    <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <ul class="breadcrumb">
-            <li><a routerLink="/">Banadir</a></li>
-            <li><a routerLink="/hirshabelle">Hirshabelle</a></li>
-            <li><a routerLink="/#">Koonfor Galbeed</a></li>
+          <ul class="nav nav-tabs">
+            <li ><a routerLink="/">Home</a></li>
+            <li><a routerLink="/states/hirshabelle">Hirshabelle</a></li>
+            <li><a routerLink="/states/konfu-galbeed">Koonfur Galbeed</a></li>
           </ul>
+          <router-outlet></router-outlet>
         </div>
-        <!-- <router-outlet></router-outlet> -->
       </div>
     </div>
 
@@ -407,5 +408,4 @@
       </div>
     </div>
   </div>
-    <router-outlet></router-outlet>
 </div>
