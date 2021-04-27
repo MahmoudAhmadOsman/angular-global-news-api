@@ -32,13 +32,44 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="nav nav-tabs">
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/states/hirshabelle">Hirshabelle</a></li>
-            <li><a routerLink="/states/south-west">South West</a></li>
-            <li><a routerLink="/states/galmudug">Galmudug</a></li>
-            <li><a routerLink="/states/putland">Putland</a></li>
-            <li><a routerLink="/states/somali-land">Somaliand</a></li>
-            <li><a routerLink="/states/jubaland">Jubaland</a></li>
+            <li>
+              <a
+                routerLink="/"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/hirshabelle" routerLinkActive="active"
+                >Hirshabelle</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/south-west" routerLinkActive="active"
+                >South West</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/galmudug" routerLinkActive="active"
+                >Galmudug</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/putland" routerLinkActive="active"
+                >Putland</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/somali-land" routerLinkActive="active"
+                >Somaliand</a
+              >
+            </li>
+            <li>
+              <a routerLink="/states/jubaland" routerLinkActive="active"
+                >Jubaland</a
+              >
+            </li>
           </ul>
           <router-outlet></router-outlet>
         </div>
