@@ -11,7 +11,7 @@ import { StatesComponent } from './components/states/states.component';
 import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent }, //Default route
   { path:"news-details/:id", component: NewsDetailsComponent},
   { path: "about", component: AboutComponent },
   {
@@ -24,11 +24,14 @@ const routes: Routes = [
     path:"podcasts", component: PodcastsComponent
   },
   {
-      path:"states", component: StatesComponent
+    path: "states", component: StatesComponent,
+    children: [
+        {
+    path:"hirshabelle", component: HirshabelleComponent
   },
-  {
-    path:"hirshabelle", component:HirshabelleComponent
+    ]
   },
+
   { path: "contact", component: ContactComponent },
   { path:"**", redirectTo:""} //Invalid Route
 
