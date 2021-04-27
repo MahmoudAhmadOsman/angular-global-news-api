@@ -1,5 +1,6 @@
 import { StateService } from './../../services/state.service';
 import { Component, OnInit } from '@angular/core';
+import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-states',
@@ -12,7 +13,7 @@ export class StatesComponent implements OnInit {
   
   constructor(private stateService: StateService) {
     stateService.getAllStates().subscribe((data) => {
-      this.states = data;
+       this.states =    data;
       console.log("List of All Data: ", data);
     }, (error) => {
       console.log("An error has occured: ", error.message);

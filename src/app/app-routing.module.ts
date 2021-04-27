@@ -8,6 +8,7 @@ import { NewsDetailsComponent } from './components/news-details/news-details.com
 import { UsersComponent } from './components/users/users.component';
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { StatesComponent } from './components/states/states.component';
+import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,10 @@ const routes: Routes = [
   },
   {
       path:"states", component: StatesComponent
-    },
+  },
+  {
+    path:"hirshabelle", component:HirshabelleComponent
+  },
   { path:"contact", component: ContactComponent}
 
 ];

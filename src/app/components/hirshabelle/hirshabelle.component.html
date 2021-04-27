@@ -1,0 +1,86 @@
+<div class="hirshabelle_list">
+  <div class="container">
+    <div class="row" *ngFor="let state of states">
+      <div class="col-md-3">
+        <!-- Start of Hirshabelle -->
+        <div class="thumbnail">
+          <img
+            class="img-responsive"
+            src="https://source.unsplash.com/1600x900/?office"
+            alt="{{state.hirshabelle.anotherName}}"
+          />
+          <div class="caption">
+            <h2>
+              {{state.hirshabelle.city}}
+              <small>- State Capital of Hirshabelle</small>
+            </h2>
+            <small
+              ><b>Temporary Capital: </b
+              >{{state.hirshabelle.anotherName}}</small
+            >
+            <p><b>Population</b>: {{state.hirshabelle.population | number}}</p>
+            <p><b>Main Sources</b>: {{state.hirshabelle.mainSources}}</p>
+            <p><b>Governor Name</b>: {{state.hirshabelle.governorName}}</p>
+            <p><b>Number of Ports</b>: {{state.hirshabelle.numberOfAirport}}</p>
+            <p><b>Number of Airports</b>: {{state.banadir.numberOfAirport}}</p>
+            <p>
+              <b>Number Of Districts</b>:
+              {{state.hirshabelle.numberOfDistrict+1}}
+            </p>
+            <p><b>Number Of Beaches</b>: {{state.hirshabelle.numberOfBeach}}</p>
+            <p>
+              <b>Number of Miles</b>: {{state.hirshabelle.milesSquare}} square
+            </p>
+            <hr />
+            <!-- <pre><b></b>: {{state.banadir | json }}</pre> -->
+
+            <button class="btn btn-primary">{{state.hirshabelle.id}}</button>
+          </div>
+        </div>
+        <!-- End of Hirshabelle -->
+      </div>
+      <div class="cold-md-9">
+        <h4>Names & Numbers of Districts</h4>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>State Name</th>
+                <th>State Capital</th>
+                <th>Population</th>
+                <th>Main Resources</th>
+                <th>Governor Name</th>
+                <th># of Airports</th>
+                <th># of Districts</th>
+                <th># of Beaches</th>
+                <th># of Miles</th>
+                <th># of Rivers</th>
+                <th>Budget</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <b> {{state.hirshabelle.city }}</b>
+                </td>
+                <td><b> {{state.hirshabelle.city }}</b></td>
+                <td>
+                  <b> {{state.hirshabelle.population | number}}</b>
+                </td>
+                <td><b> {{state.hirshabelle.mainSources}}</b></td>
+
+                <td><b> {{state.hirshabelle.governorName}}</b></td>
+                <td><b> {{state.hirshabelle.numberOfAirport}}</b></td>
+                <td><b> {{state.hirshabelle.numberOfDistrict}}</b></td>
+                <td><b> {{state.hirshabelle.numberOfBeach}}</b></td>
+                <td><b> {{state.hirshabelle.milesSquare}}</b></td>
+                <td><b> {{state.hirshabelle.numberOfRivers}}</b></td>
+                <td><b> {{state.hirshabelle.budget | currency}}</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,8 @@ import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { StatesComponent } from './components/states/states.component';
+import { BreadcrumbNavComponent } from './components/breadcrumb-nav/breadcrumb-nav.component';
+import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { StatesComponent } from './components/states/states.component';
     PodcastsComponent,
     FooterComponent,
     ContactComponent,
-    StatesComponent
+    StatesComponent,
+    BreadcrumbNavComponent,
+    HirshabelleComponent
   ],
   imports: [
     BrowserModule,
