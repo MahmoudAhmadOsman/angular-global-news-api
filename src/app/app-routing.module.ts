@@ -26,9 +26,10 @@ const routes: Routes = [
   {
     path: "states", component: StatesComponent,
     children: [
-        {
-    path:"hirshabelle", component: HirshabelleComponent
-  },
+      {
+        path: "", redirectTo:"hirshabelle", pathMatch:"full"
+      },
+        {path:"hirshabelle", component: HirshabelleComponent},
     ]
   },
 
