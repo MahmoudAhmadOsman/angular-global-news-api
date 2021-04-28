@@ -17,7 +17,7 @@
             <p><i class="fa fa-calendar"></i>&nbsp; {{blog.PublishedDate}}</p>
             <p>
               <a
-                [routerLink]="['/blogs/blog-details', blog.id ]"
+                [routerLink]="['/blogs/blog-details', blog.id, blog.title  ]"
                 class="text-danger"
                 role="button"
                 >Read More...</a

@@ -4,8 +4,9 @@
         position: relative;
         img{
             width: 100%;
-            max-height: 580px;
-            object-fit:fill;
+            height: auto;
+            height: 75vh;
+            object-fit: fill;
         }
     }
 }
