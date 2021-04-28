@@ -1,12 +1,16 @@
 <section class="blog-details">
   <div class="container">
+    <a href="/blogs">
+      <i class="fa fa-chevron-left btn btn-danger btn-sm" title="Go back"></i>
+    </a>
+    <hr />
     <div class="row">
       <div class="col-md-12">
         <div class="thumbnail">
           <img
             class="img-responsive"
             src="{{blogDetails.blogImage}}"
-             onError="this.src='https://via.placeholder.com/150/150'"
+            onError="this.src='https://via.placeholder.com/150/150'"
             alt="{{blogDetails.title}}"
           />
           <div class="caption">
@@ -14,8 +18,12 @@
             <p>{{blogDetails.body}}</p>
 
             <hr />
-            <p><i class="fa fa-user-circle"></i>&nbsp; {{blogDetails.author}}</p>
-            <p><i class="fa fa-calendar"></i>&nbsp; {{blogDetails.PublishedDate}}</p>
+            <p>
+              <i class="fa fa-user-circle"></i>&nbsp; {{blogDetails.author}}
+            </p>
+            <p>
+              <i class="fa fa-calendar"></i>&nbsp; {{blogDetails.PublishedDate}}
+            </p>
           </div>
         </div>
       </div>
