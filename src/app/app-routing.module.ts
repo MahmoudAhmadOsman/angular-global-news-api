@@ -9,6 +9,7 @@ import { UsersComponent } from './components/users/users.component';
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { StatesComponent } from './components/states/states.component';
 import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
+import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-galbeed.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, //Default route
@@ -27,7 +28,8 @@ const routes: Routes = [
     path: "states", component: StatesComponent,
     children: [
 
-      { path: "hirshabelle", component: HirshabelleComponent }
+      { path: "hirshabelle", component: HirshabelleComponent },
+      { path: "koonfur-galbeed", component: KoonfurGalbeedComponent },
       
     ]
   },

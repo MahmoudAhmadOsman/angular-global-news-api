@@ -17,6 +17,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { StatesComponent } from './components/states/states.component';
 import { BreadcrumbNavComponent } from './components/breadcrumb-nav/breadcrumb-nav.component';
 import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
+import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-galbeed.component';
+import { JubalandComponent } from './components/jubaland/jubaland.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.compo
     ContactComponent,
     StatesComponent,
     BreadcrumbNavComponent,
-    HirshabelleComponent
+    HirshabelleComponent,
+    KoonfurGalbeedComponent,
+    JubalandComponent
   ],
   imports: [
     BrowserModule,
