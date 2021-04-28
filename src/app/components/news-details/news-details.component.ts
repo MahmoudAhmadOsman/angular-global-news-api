@@ -18,9 +18,9 @@ export class NewsDetailsComponent implements OnInit {
    
     const id = this.route.snapshot.params['id'];
 
-    this.newsapi.getNewsByTitle(id).subscribe(data => {
+    this.newsapi.getNewsByTitle(id).subscribe(async data => {
       console.log("News Details: ", data)
-      this.newsDetails.source = data;
+      this.newsDetails.source = await data;
       
     }, (error: any) => {
        this.errorMessage =  error.message

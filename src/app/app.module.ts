@@ -19,6 +19,8 @@ import { BreadcrumbNavComponent } from './components/breadcrumb-nav/breadcrumb-n
 import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
 import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-galbeed.component';
 import { JubalandComponent } from './components/jubaland/jubaland.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { JubalandComponent } from './components/jubaland/jubaland.component';
     BreadcrumbNavComponent,
     HirshabelleComponent,
     KoonfurGalbeedComponent,
-    JubalandComponent
+    JubalandComponent,
+    BlogComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,

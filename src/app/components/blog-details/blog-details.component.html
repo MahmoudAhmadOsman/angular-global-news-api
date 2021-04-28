@@ -1,0 +1,24 @@
+<section class="blog-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="thumbnail">
+          <img
+            class="img-responsive"
+            src="{{blogDetails.blogImage}}"
+             onError="this.src='https://via.placeholder.com/150/150'"
+            alt="{{blogDetails.title}}"
+          />
+          <div class="caption">
+            <h3>{{blogDetails.title}}</h3>
+            <p>{{blogDetails.body}}</p>
+
+            <hr />
+            <p><i class="fa fa-user-circle"></i>&nbsp; {{blogDetails.author}}</p>
+            <p><i class="fa fa-calendar"></i>&nbsp; {{blogDetails.PublishedDate}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

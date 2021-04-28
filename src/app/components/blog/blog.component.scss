@@ -1,0 +1,11 @@
+.blog_list{
+    position: relative;
+    .thumbnail{
+        position: relative;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}

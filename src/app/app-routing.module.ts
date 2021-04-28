@@ -10,6 +10,8 @@ import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { StatesComponent } from './components/states/states.component';
 import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.component';
 import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-galbeed.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, //Default route
@@ -33,6 +35,16 @@ const routes: Routes = [
       
     ]
   },
+ 
+  {
+    path: "blogs", children: [
+      { path: "", component: BlogComponent },
+      { path: "blog-details/:id/:name", component: BlogDetailsComponent },
+  ]
+},
+ 
+ 
+
 
   { path: "contact", component: ContactComponent },
   { path:"**", redirectTo:""} //Invalid Route
