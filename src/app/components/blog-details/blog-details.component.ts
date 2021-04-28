@@ -13,8 +13,6 @@ export class BlogDetailsComponent implements OnInit {
   constructor(private blogService: BlogService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
- 
-   
     this.showBlogDetails();
    
   }
