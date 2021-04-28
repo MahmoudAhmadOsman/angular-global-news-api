@@ -12,8 +12,8 @@ export class StatesComponent implements OnInit {
   public states: [];
   
   constructor(private stateService: StateService) {
-    stateService.getAllStates().subscribe((data) => {
-       this.states =    data;
+    stateService.getAllStates().subscribe(async (data) => {
+       this.states =  await  data;
       console.log("List of All Data: ", data);
     }, (error) => {
       console.log("An error has occured: ", error.message);
