@@ -1,20 +1,30 @@
 .main-nagivation {
     position: relative;
-nav{
-      .navbar-brand {
-        position: relative;
 
-        img {
-            width: 350px;
-            height: auto;
-            margin-top: -25px;
+    nav {
+        .navbar-brand {
+            position: relative;
+
+            img {
+                width: 350px;
+                height: auto;
+                margin-top: -25px;
+            }
         }
+
+        .navbar-nav {
+            text-transform: uppercase;
+        }
+
+
     }
 
-.navbar-nav{
-    text-transform: uppercase;
-}
+    .navbar-inverse {
+        background-color: #fff;
+        border-color: #fff;
+    }
 
-}
-  
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+    }
 }
