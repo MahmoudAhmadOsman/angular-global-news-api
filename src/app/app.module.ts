@@ -21,6 +21,8 @@ import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-ga
 import { JubalandComponent } from './components/jubaland/jubaland.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+ 
+import { CutBlogDescPipe } from './pipes/cut-blog-desc.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     KoonfurGalbeedComponent,
     JubalandComponent,
     BlogComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+ 
+    CutBlogDescPipe
   ],
   imports: [
     BrowserModule,

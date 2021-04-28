@@ -10,7 +10,7 @@ import { error } from '@angular/compiler/src/util';
 })
 export class BlogComponent implements OnInit {
 
-  public blogs;
+  public blogs = [];
 
   constructor(private blogService: BlogService) {
 

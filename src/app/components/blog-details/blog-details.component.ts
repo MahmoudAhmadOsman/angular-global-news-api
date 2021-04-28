@@ -16,8 +16,6 @@ export class BlogDetailsComponent implements OnInit {
     this.showBlogDetails();
    
   }
-
-
   //Show blog details
   showBlogDetails() {
        console.log(this.route.snapshot.params["id"])
