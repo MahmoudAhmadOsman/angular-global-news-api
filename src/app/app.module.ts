@@ -24,6 +24,7 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
  
 import { CutBlogDescPipe } from './pipes/cut-blog-desc.pipe';
 import { ShowLoadingComponent } from './components/show-loading/show-loading.component';
+import { GalmudugComponent } from './components/galmudug/galmudug.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { ShowLoadingComponent } from './components/show-loading/show-loading.com
  
     CutBlogDescPipe,
  
-    ShowLoadingComponent
+    ShowLoadingComponent,
+ 
+    GalmudugComponent
   ],
   imports: [
     BrowserModule,

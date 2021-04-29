@@ -1,3 +1,4 @@
+import { GalmudugComponent } from './components/galmudug/galmudug.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { NgModule } from '@angular/core';
@@ -32,6 +33,7 @@ const routes: Routes = [
 
       { path: "hirshabelle", component: HirshabelleComponent },
       { path: "koonfur-galbeed", component: KoonfurGalbeedComponent },
+      { path: "galmudug", component: GalmudugComponent },
       
     ]
   },
