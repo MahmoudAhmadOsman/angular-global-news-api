@@ -3,13 +3,14 @@
     height: auto;
     background: #dadada24;
     position: relative;
-    display: flex;
+    display: block;
 
     .thumbnail {
         position: relative;
 
         img {
-            width: 640px
+            width: 640px;
+            height:auto
         }
 
         button.btn-primary {
