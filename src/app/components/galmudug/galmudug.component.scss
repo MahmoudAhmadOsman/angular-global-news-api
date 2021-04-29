@@ -1,0 +1,21 @@
+.galmudug_list {
+    width: 100%;
+    height: auto;
+    background: #dadada24;
+    position: relative;
+    display: flex;
+
+    .thumbnail {
+        position: relative;
+
+        img {
+            width: 640px
+        }
+
+        button.btn-primary {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+    }
+}
