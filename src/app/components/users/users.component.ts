@@ -9,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
 
-  public listOfUsers = []
+  public listOfUsers = [];
+  public loading = true;
   constructor(private userService: UsersService) {
     
     userService.getAllUsers().subscribe(users => {
 
       this.listOfUsers = users;
+      this.loading = false;
 
       console.log(users)
 

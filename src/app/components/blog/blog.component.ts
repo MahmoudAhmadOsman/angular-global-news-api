@@ -11,13 +11,15 @@ import { error } from '@angular/compiler/src/util';
 export class BlogComponent implements OnInit {
 
   public blogs = [];
-
+  loading = true;
+  public blogTitle: string = "List of blogs";
   constructor(private blogService: BlogService) {
 
     blogService.getAllBlogs().subscribe(data => {
       console.log("list of blogs", data);
-      
       this.blogs = data;
+  this.loading = false;
+
     }, (error) => {
       console.log("Error", error);
 })

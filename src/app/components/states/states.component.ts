@@ -10,10 +10,12 @@ import { async } from 'rxjs/internal/scheduler/async';
 export class StatesComponent implements OnInit {
 
   public states: [];
-  
+  loading = true;
   constructor(private stateService: StateService) {
     stateService.getAllStates().subscribe(async (data) => {
-       this.states =  await  data;
+      this.states = await data;
+      //Set loading to false after data is loaded
+      this.loading = false;
       console.log("List of All Data: ", data);
     }, (error) => {
       console.log("An error has occured: ", error.message);

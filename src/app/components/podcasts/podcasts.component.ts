@@ -10,11 +10,14 @@ export class PodcastsComponent implements OnInit {
 
   public podcastTitle = "Lastest Podcasts";
   public listOfPodcast = [];
+  public loading = true;
+
   constructor(private podcastService: PodcastService) {
     
     podcastService.getPodCastList().subscribe((data) => {
       console.log("PodCast Data: ", data.podcasts)
       this.listOfPodcast = data.podcasts;
+      this.loading = false;
     }, (error) => {
       console.log("Error: ", error)
     })

@@ -19,10 +19,10 @@
 
             <hr />
             <p>
-              <i class="fa fa-user-circle"></i>&nbsp; {{blogDetails.author}}
+              <i class="fa fa-user-circle" title="Written by {{blogDetails.author}}" ></i>&nbsp; {{blogDetails.author}}
             </p>
             <p>
-              <i class="fa fa-calendar"></i>&nbsp; {{blogDetails.PublishedDate}}
+              <i class="fa fa-calendar" title="Published on {{blogDetails.PublishedDate | date}}"></i>&nbsp; {{blogDetails.PublishedDate | date}}
             </p>
           </div>
         </div>

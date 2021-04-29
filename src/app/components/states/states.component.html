@@ -1,4 +1,14 @@
-<div class="states_list">
+<section class="states_list">
+  <!-- Start of loading spinner -->
+  <div class="container">
+    <div class="row" *ngIf="loading">
+      <div class="col-md-8 col-md-offset-5" style="margin-bottom: 30px;">
+        <i class="fa fa-spinner fa-spin" style="font-size: 60px;"></i>
+      </div>
+    </div>
+  </div>
+  <!-- End of loading spinner -->
+
   <div class="present_container">
     <div class="container">
       <div class="row">
@@ -28,53 +38,51 @@
     <!-- Bring the breadcrub links here -->
     <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
 
-     
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-tabs">
-            <li>
-              <a
-                routerLink="/"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/hirshabelle" routerLinkActive="active"
-                >Hirshabelle</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/koonfur-galbeed" routerLinkActive="active"
-                >South West</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/galmudug" routerLinkActive="active"
-                >Galmudug</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/putland" routerLinkActive="active"
-                >Putland</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/somali-land" routerLinkActive="active"
-                >Somaliand</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/jubaland" routerLinkActive="active"
-                >Jubaland</a
-              >
-            </li>
-          </ul>
-          <router-outlet></router-outlet>
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs">
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/hirshabelle" routerLinkActive="active"
+              >Hirshabelle</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/koonfur-galbeed" routerLinkActive="active"
+              >South West</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/galmudug" routerLinkActive="active"
+              >Galmudug</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/putland" routerLinkActive="active"
+              >Putland</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/somali-land" routerLinkActive="active"
+              >Somaliand</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/jubaland" routerLinkActive="active"
+              >Jubaland</a
+            >
+          </li>
+        </ul>
+        <router-outlet></router-outlet>
       </div>
-   
+    </div>
 
     <div class="row" *ngFor="let state of states">
       <div class="col-md-3">
@@ -179,12 +187,13 @@
                   {{state.banadir.districts[3].name }}
 
                   <small class="badge badge-primary"
-                    >{{state.banadir.districts[3].id}}</small>
+                    >{{state.banadir.districts[3].id}}</small
+                  >
                 </td>
                 <td>{{state.banadir.districts[3].cityHall }}</td>
-               <td>
+                <td>
                   {{state.banadir.districts[3].population | number}}
-               </td>
+                </td>
                 <td>{{state.banadir.districts[3].policeStation}}</td>
                 <td class="text-danger">
                   {{state.banadir.districts[3].budget | currency}}
@@ -197,7 +206,8 @@
                 <td>
                   {{state.banadir.districts[4].name }}
                   <small class="badge badge-primary"
-                    >{{state.banadir.districts[4].id}}</small>
+                    >{{state.banadir.districts[4].id}}</small
+                  >
                 </td>
                 <td>{{state.banadir.districts[4].cityHall }}</td>
                 <td>
@@ -443,4 +453,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
