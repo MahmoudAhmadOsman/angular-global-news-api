@@ -1,52 +1,58 @@
 <section class="blog_list">
   <!-- Start of loading spinner -->
   <div class="container">
-    <div class="row" *ngIf="loading">
+    <div class="row" *ngIf="loading else loaded">
       <div class="col-md-8 col-md-offset-5" style="margin-bottom: 30px;">
         <i class="fa fa-spinner fa-spin" style="font-size: 60px;"></i>
       </div>
     </div>
   </div>
   <!-- End of loading spinner -->
-  <div class="container">
-    <h1 class="text-danger">{{blogTitle}}</h1>
-    <hr />
-    <div class="row">
-      <div class="clearfix visible-lg-block"></div>
 
-      <div class="col-md-3" *ngFor="let blog of blogs">
-        <div class="thumbnail">
-          <a [routerLink]="['/blogs/blog-details', blog.id, blog.title ]">
-            <img
-              class="img-responsive"
-              src="{{blog.blogImage}}"
-              alt="{{blog.title}}"
-          /></a>
-          <div class="caption">
-            <h3 class="text-primary">
-              <a [routerLink]="['/blogs/blog-details', blog.id, blog.title  ]">
-                {{blog.title}}</a
-              >
-            </h3>
-            <p>{{blog.body | cutBlogDesc : 65}}...</p>
-            <hr />
+  <ng-template #loaded>
+    <div class="container">
+      <h1 class="text-danger">{{blogTitle}}</h1>
+      <hr />
+      <div class="row">
+        <div class="clearfix visible-lg-block"></div>
 
-            <p><i class="fa fa-user-circle"></i>&nbsp; {{blog.author}}</p>
-            <p>
-              <i class="fa fa-calendar"></i>&nbsp; {{blog.PublishedDate | date}}
-            </p>
+        <div class="col-md-3" *ngFor="let blog of blogs">
+          <div class="thumbnail">
+            <a [routerLink]="['/blogs/blog-details', blog.id, blog.title ]">
+              <img
+                class="img-responsive"
+                src="{{blog.blogImage}}"
+                alt="{{blog.title}}"
+            /></a>
+            <div class="caption">
+              <h3 class="text-primary">
+                <a
+                  [routerLink]="['/blogs/blog-details', blog.id, blog.title  ]"
+                >
+                  {{blog.title}}</a
+                >
+              </h3>
+              <p>{{blog.body | cutBlogDesc : 65}}...</p>
+              <hr />
 
-            <p>
-              <a
-                [routerLink]="['/blogs/blog-details', blog.id, blog.title  ]"
-                class="text-danger"
-                role="button"
-                >Read More...</a
-              >
-            </p>
+              <p><i class="fa fa-user-circle"></i>&nbsp; {{blog.author}}</p>
+              <p>
+                <i class="fa fa-calendar"></i>&nbsp; {{blog.PublishedDate |
+                date}}
+              </p>
+
+              <p>
+                <a
+                  [routerLink]="['/blogs/blog-details', blog.id, blog.title  ]"
+                  class="text-danger"
+                  role="button"
+                  >Read More...</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-template>
 </section>

@@ -18,7 +18,9 @@ export class BlogComponent implements OnInit {
     blogService.getAllBlogs().subscribe(data => {
       console.log("list of blogs", data);
       this.blogs = data;
-  this.loading = false;
+
+      //Set loading to false after data is fetched
+      this.loading = false;
 
     }, (error) => {
       console.log("Error", error);

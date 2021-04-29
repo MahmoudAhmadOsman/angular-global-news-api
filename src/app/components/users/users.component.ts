@@ -11,7 +11,7 @@ export class UsersComponent implements OnInit {
 
   public listOfUsers = [];
   public loading = true;
-  public useList: string ="List of users"
+  public useList: string = "List of users";
   constructor(private userService: UsersService) {
     
     userService.getAllUsers().subscribe(users => {
