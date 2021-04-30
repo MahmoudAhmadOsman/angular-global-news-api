@@ -25,6 +25,10 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
 import { CutBlogDescPipe } from './pipes/cut-blog-desc.pipe';
 import { ShowLoadingComponent } from './components/show-loading/show-loading.component';
 import { GalmudugComponent } from './components/galmudug/galmudug.component';
+ 
+import { SomalilandComponent } from './components/somaliland/somaliland.component';
+import { PutlandComponent } from './components/putland/putland.component';
+ 
 
 @NgModule({
   declarations: [
@@ -49,8 +53,14 @@ import { GalmudugComponent } from './components/galmudug/galmudug.component';
     CutBlogDescPipe,
  
     ShowLoadingComponent,
+
+    GalmudugComponent,
  
-    GalmudugComponent
+    SomalilandComponent,
+ 
+    PutlandComponent,
+ 
+  
   ],
   imports: [
     BrowserModule,

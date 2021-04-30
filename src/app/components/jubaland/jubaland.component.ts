@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/services/state.service';
 
 @Component({
   selector: 'app-jubaland',
@@ -7,7 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JubalandComponent implements OnInit {
 
-  constructor() { }
+  
+
+  public states: [];
+
+  constructor(private jubaland: StateService) {
+    jubaland.getAllStates().subscribe((data) => {
+      this.states = data;
+      console.log("List of jubaland Data: ", data);
+    }, (error) => {
+      console.log("An error has occured: ", error.message);
+
+    })
+
+  }
+
+
+
+
+
+
 
   ngOnInit(): void {
   }

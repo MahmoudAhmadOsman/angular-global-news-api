@@ -1,4 +1,6 @@
-import { GalmudugComponent } from './components/galmudug/galmudug.component';
+ 
+ 
+ import { GalmudugComponent } from './components/galmudug/galmudug.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,11 @@ import { HirshabelleComponent } from './components/hirshabelle/hirshabelle.compo
 import { KoonfurGalbeedComponent } from './components/koonfur-galbeed/koonfur-galbeed.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { JubalandComponent } from './components/jubaland/jubaland.component';
+import { SomalilandComponent } from './components/somaliland/somaliland.component';
+import { PutlandComponent } from './components/putland/putland.component';
+ 
+ 
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, //Default route
@@ -33,7 +40,12 @@ const routes: Routes = [
 
       { path: "hirshabelle", component: HirshabelleComponent },
       { path: "koonfur-galbeed", component: KoonfurGalbeedComponent },
+      {path: "jubaland", component: JubalandComponent},
       { path: "galmudug", component: GalmudugComponent },
+      {path: "putland", component: PutlandComponent},
+    
+   
+      { path: "somaliland", component: SomalilandComponent },
       
     ]
   },

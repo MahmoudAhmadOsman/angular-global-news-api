@@ -19,6 +19,7 @@ export class StatesComponent implements OnInit {
       console.log("List of All Data: ", data);
     }, (error) => {
       console.log("An error has occured: ", error.message);
+      this.loading = true;
 
     })
 
