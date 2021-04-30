@@ -11,455 +11,445 @@
 
   <ng-template #loaded>
     <div class="present_container">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2">
-            <img
-              class="img-responsive"
-              src="assets/images/somalia-president-farmajo.jpg"
-              alt="Somali President Mahamad Abdullahi Farmajo"
-            />
-          </div>
-          <div class="col-md-10">
-            <h2>Somalia President</h2>
-            <p>
-              Mohamed Abdullahi Mohamed, also known as Farmaajo, is a Somali
-              politician who is the founder and chairman of the Tayo party. He
-              was Prime Minister of Somalia for six months, from November 2010
-              until June 2011.
-            </p>
-          </div>
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            class="img-responsive"
+            src="assets/images/somalia-president-farmajo.jpg"
+            alt="Somali President Mahamad Abdullahi Farmajo"
+          />
+        </div>
+        <div class="col-md-10">
+          <h2>Somalia President</h2>
+          <p>
+            Mohamed Abdullahi Mohamed, also known as Farmaajo, is a Somali
+            politician who is the founder and chairman of the Tayo party. He was
+            Prime Minister of Somalia for six months, from November 2010 until
+            June 2011.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <h4>About Somalia States</h4>
-      <hr />
-      <!-- Bring the breadcrub links here -->
-      <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
+    <h4>About Somalia States</h4>
+    <hr />
+    <!-- Bring the breadcrub links here -->
+    <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
 
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-tabs">
-            <li>
-              <a
-                routerLink="/"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/hirshabelle" routerLinkActive="active"
-                >Hirshabelle</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/koonfur-galbeed" routerLinkActive="active"
-                >Koonfur Galbeed</a
-              >
-            </li>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs">
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/hirshabelle" routerLinkActive="active"
+              >Hirshabelle</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/koonfur-galbeed" routerLinkActive="active"
+              >Koonfur Galbeed</a
+            >
+          </li>
 
-            <li>
-              <a routerLink="/states/jubaland" routerLinkActive="active"
-                >Jubaland</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/galmudug" routerLinkActive="active"
-                >Galmudug</a
-              >
-            </li>
+          <li>
+            <a routerLink="/states/jubaland" routerLinkActive="active"
+              >Jubaland</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/galmudug" routerLinkActive="active"
+              >Galmudug</a
+            >
+          </li>
 
-            <li>
-              <a routerLink="/states/putland" routerLinkActive="active"
-                >Putland</a
-              >
-            </li>
-            <li>
-              <a routerLink="/states/somaliland" routerLinkActive="active"
-                >Somaliand</a
-              >
-            </li>
-          </ul>
-          <router-outlet></router-outlet>
+          <li>
+            <a routerLink="/states/putland" routerLinkActive="active"
+              >Putland</a
+            >
+          </li>
+          <li>
+            <a routerLink="/states/somaliland" routerLinkActive="active"
+              >Somaliand</a
+            >
+          </li>
+        </ul>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let state of states">
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <img
+            src="https://source.unsplash.com/1600x900/?office"
+            alt="{{state.banadir.anotherName}}"
+          />
+          <div class="caption">
+            <h3>{{state.banadir.city}} <small>- Capital of Somalia</small></h3>
+            <hr />
+            <small><b>Known as: </b>{{state.banadir.anotherName}}</small>
+            <p><b>Population</b>: {{state.banadir.population | number}}</p>
+            <p><b>Main Sources</b>: {{state.banadir.mainSources}}</p>
+            <p><b>Governor Name</b>: {{state.banadir.governorName}}</p>
+            <p><b>Number of Ports</b>: {{state.banadir.numberOfAirport}}</p>
+            <p><b>Number of Airports</b>: {{state.banadir.numberOfAirport}}</p>
+            <p>
+              <b>Number Of Districts</b>: {{state.banadir.numberOfDistrict+1}}
+            </p>
+            <p><b>Number Of Beaches</b>: {{state.banadir.numberOfBeach}}</p>
+            <p><b>Number of Miles</b>: {{state.banadir.milesSquare}} square</p>
+            <hr />
+            <!-- <pre><b></b>: {{state.banadir | json }}</pre> -->
+
+            <button class="btn btn-primary">{{state.banadir.id}}</button>
+          </div>
         </div>
       </div>
+      <!-- Distracts -->
+      <!-- let district of districts -->
+      <div class="col-md-9">
+        <h4>Names & Numbers of Districts of Banadir State</h4>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>District Names</th>
+                <th># of City Hall</th>
+                <th>Population</th>
+                <th># of Police Stattions</th>
+                <th>City Budget</th>
+                <th>City Mayor Name(s)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  {{state.banadir.districts[0].name }}<small
+                    class="badge badge-primary"
+                    >{{state.banadir.districts[0].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[0].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[0].population | number}}
+                </td>
+                <td>{{state.banadir.districts[0].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[0].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[0].cityMayor}}</td>
+              </tr>
 
-      <div class="row" *ngFor="let state of states">
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img
-              src="https://source.unsplash.com/1600x900/?office"
-              alt="{{state.banadir.anotherName}}"
-            />
-            <div class="caption">
-              <h3>
-                {{state.banadir.city}} <small>- Capital of Somalia</small>
-              </h3>
-              <hr />
-              <small><b>Known as: </b>{{state.banadir.anotherName}}</small>
-              <p><b>Population</b>: {{state.banadir.population | number}}</p>
-              <p><b>Main Sources</b>: {{state.banadir.mainSources}}</p>
-              <p><b>Governor Name</b>: {{state.banadir.governorName}}</p>
-              <p><b>Number of Ports</b>: {{state.banadir.numberOfAirport}}</p>
-              <p>
-                <b>Number of Airports</b>: {{state.banadir.numberOfAirport}}
-              </p>
-              <p>
-                <b>Number Of Districts</b>: {{state.banadir.numberOfDistrict+1}}
-              </p>
-              <p><b>Number Of Beaches</b>: {{state.banadir.numberOfBeach}}</p>
-              <p>
-                <b>Number of Miles</b>: {{state.banadir.milesSquare}} square
-              </p>
-              <hr />
-              <!-- <pre><b></b>: {{state.banadir | json }}</pre> -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[1].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[1].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[1].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[1].population | number}}
+                </td>
+                <td>{{state.banadir.districts[1].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[1].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[1].cityMayor}}</td>
+              </tr>
+              <!-- district 2 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[2].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[2].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[2].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[2].population | number}}
+                </td>
+                <td>{{state.banadir.districts[2].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[2].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[2].cityMayor}}</td>
+              </tr>
+              <!-- district 3 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[3].name }}
 
-              <button class="btn btn-primary">{{state.banadir.id}}</button>
-            </div>
-          </div>
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[3].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[3].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[3].population | number}}
+                </td>
+                <td>{{state.banadir.districts[3].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[3].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[3].cityMayor}}</td>
+              </tr>
+
+              <!-- district 4 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[4].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[4].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[4].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[4].population | number}}
+                </td>
+                <td>{{state.banadir.districts[4].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[4].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[4].cityMayor}}</td>
+              </tr>
+              <!-- district 5 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[5].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[5].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[5].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[5].population | number}}
+                </td>
+                <td>{{state.banadir.districts[5].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[5].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[5].cityMayor}}</td>
+              </tr>
+              <!-- district 6 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[6].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[6].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[6].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[6].population | number}}
+                </td>
+                <td>{{state.banadir.districts[6].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[6].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[6].cityMayor}}</td>
+              </tr>
+              <!-- district 7 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[7].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[7].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[7].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[7].population | number}}
+                </td>
+                <td>{{state.banadir.districts[7].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[7].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[7].cityMayor}}</td>
+              </tr>
+
+              <!-- district 8 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[8].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[8].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[8].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[8].population | number}}
+                </td>
+                <td>{{state.banadir.districts[8].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[8].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[8].cityMayor}}</td>
+              </tr>
+              <!-- district 9 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[9].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[9].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[9].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[9].population | number}}
+                </td>
+                <td>{{state.banadir.districts[9].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[9].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[9].cityMayor}}</td>
+              </tr>
+
+              <!-- district 10 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[10].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[10].id}}</small
+                  >
+                </td>
+
+                <td>{{state.banadir.districts[10].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[10].population | number}}
+                </td>
+                <td>{{state.banadir.districts[10].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[10].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[10].cityMayor}}</td>
+              </tr>
+              <!-- district 11 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[11].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[11].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[11].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[11].population | number}}
+                </td>
+                <td>{{state.banadir.districts[11].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[11].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[11].cityMayor}}</td>
+              </tr>
+              <!-- district 12 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[12].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[12].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[12].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[12].population | number}}
+                </td>
+                <td>{{state.banadir.districts[12].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[12].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[12].cityMayor}}</td>
+              </tr>
+              <!-- district 13 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[13].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[13].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[13].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[13].population | number}}
+                </td>
+                <td>{{state.banadir.districts[13].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[13].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[13].cityMayor}}</td>
+              </tr>
+              <!-- district 14 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[14].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[14].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[14].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[14].population | number}}
+                </td>
+                <td>{{state.banadir.districts[14].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[14].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[14].cityMayor}}</td>
+              </tr>
+
+              <!-- district 15 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[15].name }}
+                  <small class="badge badge-primary"
+                    >{{state.banadir.districts[15].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[15].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[15].population | number}}
+                </td>
+                <td>{{state.banadir.districts[15].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[15].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[15].cityMayor}}</td>
+              </tr>
+
+              <!-- district 16 -->
+              <tr>
+                <td>
+                  {{state.banadir.districts[16].name }}<small
+                    class="badge badge-primary"
+                    >{{state.banadir.districts[16].id}}</small
+                  >
+                </td>
+                <td>{{state.banadir.districts[16].cityHall }}</td>
+                <td>
+                  {{state.banadir.districts[16].population | number}}
+                </td>
+                <td>{{state.banadir.districts[16].policeStation}}</td>
+                <td class="text-danger">
+                  {{state.banadir.districts[16].budget | currency}}
+                </td>
+                <td>{{state.banadir.districts[16].cityMayor}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!-- Distracts -->
-        <!-- let district of districts -->
-        <div class="col-md-9">
-          <h4>Names & Numbers of Districts of Banadir State</h4>
-          <div class="table-responsive">
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr>
-                  <th>District Names</th>
-                  <th># of City Hall</th>
-                  <th>Population</th>
-                  <th># of Police Stattions</th>
-                  <th>City Budget</th>
-                  <th>City Mayor Name(s)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    {{state.banadir.districts[0].name }}<small
-                      class="badge badge-primary"
-                      >{{state.banadir.districts[0].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[0].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[0].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[0].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[0].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[0].cityMayor}}</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    {{state.banadir.districts[1].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[1].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[1].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[1].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[1].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[1].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[1].cityMayor}}</td>
-                </tr>
-                <!-- district 2 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[2].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[2].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[2].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[2].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[2].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[2].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[2].cityMayor}}</td>
-                </tr>
-                <!-- district 3 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[3].name }}
-
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[3].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[3].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[3].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[3].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[3].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[3].cityMayor}}</td>
-                </tr>
-
-                <!-- district 4 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[4].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[4].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[4].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[4].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[4].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[4].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[4].cityMayor}}</td>
-                </tr>
-                <!-- district 5 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[5].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[5].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[5].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[5].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[5].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[5].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[5].cityMayor}}</td>
-                </tr>
-                <!-- district 6 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[6].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[6].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[6].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[6].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[6].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[6].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[6].cityMayor}}</td>
-                </tr>
-                <!-- district 7 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[7].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[7].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[7].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[7].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[7].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[7].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[7].cityMayor}}</td>
-                </tr>
-
-                <!-- district 8 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[8].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[8].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[8].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[8].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[8].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[8].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[8].cityMayor}}</td>
-                </tr>
-                <!-- district 9 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[9].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[9].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[9].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[9].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[9].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[9].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[9].cityMayor}}</td>
-                </tr>
-
-                <!-- district 10 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[10].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[10].id}}</small
-                    >
-                  </td>
-
-                  <td>{{state.banadir.districts[10].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[10].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[10].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[10].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[10].cityMayor}}</td>
-                </tr>
-                <!-- district 11 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[11].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[11].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[11].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[11].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[11].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[11].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[11].cityMayor}}</td>
-                </tr>
-                <!-- district 12 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[12].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[12].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[12].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[12].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[12].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[12].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[12].cityMayor}}</td>
-                </tr>
-                <!-- district 13 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[13].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[13].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[13].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[13].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[13].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[13].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[13].cityMayor}}</td>
-                </tr>
-                <!-- district 14 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[14].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[14].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[14].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[14].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[14].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[14].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[14].cityMayor}}</td>
-                </tr>
-
-                <!-- district 15 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[15].name }}
-                    <small class="badge badge-primary"
-                      >{{state.banadir.districts[15].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[15].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[15].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[15].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[15].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[15].cityMayor}}</td>
-                </tr>
-
-                <!-- district 16 -->
-                <tr>
-                  <td>
-                    {{state.banadir.districts[16].name }}<small
-                      class="badge badge-primary"
-                      >{{state.banadir.districts[16].id}}</small
-                    >
-                  </td>
-                  <td>{{state.banadir.districts[16].cityHall }}</td>
-                  <td>
-                    {{state.banadir.districts[16].population | number}}
-                  </td>
-                  <td>{{state.banadir.districts[16].policeStation}}</td>
-                  <td class="text-danger">
-                    {{state.banadir.districts[16].budget | currency}}
-                  </td>
-                  <td>{{state.banadir.districts[16].cityMayor}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <hr />
-          <div class="well">
-            <h2>
-              List of All District names in the Capital of Somalia, Mogadishu
-            </h2>
-            <p>{{state.banadir.districtNames}}</p>
-          </div>
+        <hr />
+        <div class="well">
+          <h2>
+            List of All District names in the Capital of Somalia, Mogadishu
+          </h2>
+          <p>{{state.banadir.districtNames}}</p>
         </div>
       </div>
     </div>
