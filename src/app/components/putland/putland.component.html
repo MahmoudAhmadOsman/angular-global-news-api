@@ -1,4 +1,4 @@
- <section class="putlanland_list">
+<section class="putlanland_list">
   <div class="container">
     <div class="row" *ngFor="let state of states">
       <div class="col-md-3">
@@ -14,23 +14,17 @@
               {{state.putland.stateName}}
               <small>- Member State</small>
             </h3>
-            <small
-              ><b>Temporary Capital: </b
-              >{{state.putland.tempCity}}</small
-            >
+            <hr />
             <p><b>Population</b>: {{state.putland.population | number}}</p>
             <p><b>Main Sources</b>: {{state.putland.mainSources}}</p>
             <p><b>Governor Name</b>: {{state.putland.governorName}}</p>
             <p><b>Number of Ports</b>: {{state.putland.numberOfAirport}}</p>
             <p><b>Number of Airports</b>: {{state.putland.numberOfAirport}}</p>
             <p>
-              <b>Number Of Districts</b>:
-              {{state.putland.numberOfDistrict+1}}
+              <b>Number Of Districts</b>: {{state.putland.numberOfDistrict+1}}
             </p>
             <p><b>Number Of Beaches</b>: {{state.putland.numberOfBeach}}</p>
-            <p>
-              <b>Number of Miles</b>: {{state.putland.milesSquare}} square
-            </p>
+            <p><b>Number of Miles</b>: {{state.putland.milesSquare}} square</p>
             <hr />
             <!-- <pre><b></b>: {{state.putland | json }}</pre> -->
 
