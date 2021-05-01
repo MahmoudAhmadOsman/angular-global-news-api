@@ -47,7 +47,7 @@
               <p class="episode">{{podcast.total_episodes}} &nbsp;episodes</p>
               <hr />
               <div class="author_images">
-                <a href="https://www.apple.com/itunes/" target="_blank">
+                <a href={{podcast.website}} target="_blank">
                   <img
                     src="assets/images/svg/apple.svg"
                     alt="{{podcast.title}}"
@@ -55,7 +55,7 @@
                   <small class="text-muted">&nbsp; itunes</small>
                 </a>
 
-                <a href="https://www.google.com/" target="_blank">
+                <a href={{podcast.website}} target="_blank">
                   <img
                     src="assets/images/svg/link.svg"
                     alt="{{podcast.title}}"
@@ -63,7 +63,7 @@
                   <small class="text-muted">&nbsp; web</small>
                 </a>
 
-                <a href="https://rss.com/" target="_blank">
+                <a href={{podcast.website}} target="_blank">
                   <img
                     src="assets/images/svg/rss.svg"
                     alt="{{podcast.title}}"
