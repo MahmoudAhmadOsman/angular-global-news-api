@@ -1,3 +1,4 @@
+import { ProductDashboardModule } from './product-dashboard/product-dashboard.module';
 import { BrowserModule } from '@angular/platform-browser';
 // import { FormsModule, NgForm } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -66,7 +67,8 @@ import { PutlandComponent } from './components/putland/putland.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ProductDashboardModule
     
   ],
   providers: [],
