@@ -3,8 +3,24 @@
     <h1 class="text-danger">Products</h1>
     <hr />
     <div class="row">
-      <div class="col-md-3">
-        <p><small>Coming soon!</small></p>
+      <div class="col-md-3" *ngFor="let product of products">
+        <div class="thumbnail">
+          <img src="{{product.image}}" alt="{{product.title}}" />
+          <div class="caption">
+            <h3>{{product.title}}</h3>
+            <h6 class="text-muted">Sizes: {{product.availableSizes}}</h6>
+            <p>{{product.description}}</p>
+            <p>
+              <button class="btn btn-default" role="button" disabled>
+                ${{product.price}}
+              </button>
+              &nbsp;
+              <a href="{{product.id}}" class="btn btn-primary" role="button"
+                >View</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
