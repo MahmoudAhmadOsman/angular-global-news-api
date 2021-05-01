@@ -17,13 +17,13 @@ export class ProductDashboardComponent implements OnInit {
   constructor(private productService: ProductService) {
     
     productService.getAllProducts().subscribe(data => {
-      console.log(data)
+      console.log("Products Data", data)
       
       this.products = data
     this.loading = false;
     }, (error) => {
       this.errorMessage = error;
-      console.log(error)
+      console.log("An Error has occurred: ", error)
     })
 
   }
