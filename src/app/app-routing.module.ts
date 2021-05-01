@@ -1,3 +1,4 @@
+import { ProductDashboardComponent } from './product-dashboard/product-dashboard/product-dashboard.component';
  
  
  import { GalmudugComponent } from './components/galmudug/galmudug.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent }, //Default route
   { path:"news-details/:id", component: NewsDetailsComponent},
   { path: "about", component: AboutComponent },
+  { path: "products", component: ProductDashboardComponent },
   {
     path: "users", children: [
       { path: '', component: UsersComponent },
@@ -61,6 +63,7 @@ const routes: Routes = [
 
 
   { path: "contact", component: ContactComponent },
+ 
   { path:"**", redirectTo:""} //Invalid Route
 
 ];
