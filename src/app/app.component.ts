@@ -8,21 +8,21 @@ import { Event, Router, NavigationStart, NavigationEnd, RouterEvent } from "@ang
 })
 export class AppComponent {
 
-  //Show loading Indicator
-  public showLoadingIndicator = true;
-  constructor(private _router: Router) {
+ 
+  // public showLoadingIndicator = true;
+  // constructor(private _router: Router) {
     
-    //Show Loader Indicator
-    this._router.events.subscribe((RouterEvent: Event) => {
+  
+  //   this._router.events.subscribe((RouterEvent: Event) => {
 
-      if (RouterEvent instanceof NavigationStart) {
-        this.showLoadingIndicator = true;
-      }
-      if (RouterEvent instanceof NavigationEnd) {
-        this.showLoadingIndicator = false;
-      }
-    })
-  }
+  //     if (RouterEvent instanceof NavigationStart) {
+  //       this.showLoadingIndicator = true;
+  //     }
+  //     if (RouterEvent instanceof NavigationEnd) {
+  //       this.showLoadingIndicator = false;
+  //     }
+  //   })
+  // }
   
 
 }

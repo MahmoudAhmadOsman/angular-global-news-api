@@ -50,18 +50,12 @@ import { PutlandComponent } from './components/putland/putland.component';
     JubalandComponent,
     BlogComponent,
     BlogDetailsComponent,
- 
     CutBlogDescPipe,
- 
     ShowLoadingComponent,
-
     GalmudugComponent,
- 
     SomalilandComponent,
- 
     PutlandComponent,
  
-  
   ],
   imports: [
     BrowserModule,
