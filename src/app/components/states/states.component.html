@@ -1,50 +1,40 @@
 <section class="states_list">
-  <!-- Start of loading spinner -->
-  <div class="container">
-    <div class="row" *ngIf="loading else loaded">
-      <div class="col-md-8 col-md-offset-5" style="margin-bottom: 30px;">
-        <i class="fa fa-spinner fa-spin" style="font-size: 60px;"></i>
-      </div>
-    </div>
-  </div>
-  <!-- End of loading spinner -->
-
-  <ng-template #loaded>
-    <div class="present_container">
-      <div class="row">
-        <div class="col-md-2">
-          <img
-            class="img-responsive"
-            src="assets/images/somalia-president-farmajo.jpg"
-            alt="Somali President Mahamad Abdullahi Farmajo"
-          />
+    <!-- Start of loading spinner -->
+    <div class="container">
+        <div class="row" *ngIf="loading else loaded">
+            <div class="col-md-8 col-md-offset-5" style="margin-bottom: 30px;">
+                <i class="fa fa-spinner fa-spin" style="font-size: 60px;"></i>
+            </div>
         </div>
-        <div class="col-md-10">
-          <h2>Somalia President</h2>
-          <p>
-            Mohamed Abdullahi Mohamed, also known as Farmaajo, is a Somali
-            politician who is the founder and chairman of the Tayo party. He was
-            Prime Minister of Somalia for six months, from November 2010 until
-            June 2011.
-          </p>
-        </div>
-      </div>
     </div>
+    <!-- End of loading spinner -->
 
-    <h4>About Somalia States</h4>
-    <hr />
-    <!-- Bring the breadcrub links here -->
-    <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
+    <ng-template #loaded>
+        <div class="present_container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="img-responsive" src="assets/images/svg/somalia-flag.svg" alt="Somalia" />
+                </div>
+                <div class="col-md-10">
+                    <h2>Somalia</h2>
+                    <p>
+                        Somalia, officially the Federal Republic of Somalia, is a country in the Horn of Africa. It is bordered by Ethiopia to the west, Djibouti to the Northwest, the Gulf of Aden to the north, the Indian Ocean to the east, and Kenya to the southwest. Somalia
+                        has the longest coastline on Africa's mainland.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <ul class="nav nav-tabs">
-          <li>
-            <a
-              routerLink="/"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}"
-              >Home</a
+        <h4>About Somalia States</h4>
+        <hr />
+        <!-- Bring the breadcrub links here -->
+        <!-- <app-breadcrumb-nav></app-breadcrumb-nav> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a
             >
           </li>
           <li>
