@@ -15,14 +15,17 @@ export class ProductDashboardComponent implements OnInit {
   public errorMessage = "Unable to fetch products";
 
   constructor(private productService: ProductService) {
-    
+
     productService.getAllProducts().subscribe(data => {
       console.log("Products Data", data)
-      
+
       this.products = data
-    this.loading = false;
+      this.loading = false;
+
+
     }, (error) => {
       this.errorMessage = error;
+      this.loading = true;
       console.log("An Error has occurred: ", error)
     })
 

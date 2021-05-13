@@ -1,22 +1,31 @@
 <section class="product_list">
-  <div class="container">
-    <h1 class="text-danger">Products</h1>
-    <hr />
-    <div class="row">
-      <div class="col-md-3" *ngFor="let product of products">
-        <div class="thumbnail">
-          <img src="{{product.image}}" alt="{{product.title}}" />
-          <div class="caption">
-            <h3>{{product.title}}</h3>
-            <h6 class="text-muted">Sizes: {{product.availableSizes}}</h6>
-            <p>{{product.description }}</p>
-            <p>
-              <button class="btn btn-default" role="button" disabled>
+    <!-- Start of loading spinner -->
+    <div class="container">
+        <div class="row" *ngIf="loading else loaded">
+            <div class="col-md-8 col-md-offset-5" style="margin-bottom: 30px;">
+                <app-show-loading></app-show-loading>
+            </div>
+        </div>
+    </div>
+    <!-- End of loading spinner -->
+
+    <ng-template #loaded>
+        <div class="container">
+            <h1 class="text-danger">Products</h1>
+            <hr />
+            <div class="row">
+                <div class="col-md-3" *ngFor="let product of products">
+                    <div class="thumbnail">
+                        <img src="{{product.image}}" alt="{{product.title}}" />
+                        <div class="caption">
+                            <h3>{{product.title}}</h3>
+                            <h6 class="text-muted">Sizes: {{product.availableSizes}}</h6>
+                            <p>{{product.description }}</p>
+                            <p>
+                                <button class="btn btn-default" role="button" disabled>
                 {{product.price | currency}}
-              </button>
-              &nbsp;
-              <a href="{{product.id}}" class="btn btn-primary" role="button"
-                >View</a
+              </button> &nbsp;
+                                <a href="{{product.id}}" class="btn btn-primary" role="button">View</a
               >
             </p>
           </div>
@@ -24,4 +33,6 @@
       </div>
     </div>
   </div>
+    </ng-template>
+
 </section>
