@@ -22,8 +22,8 @@ export class UserDetailsComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     this.usersService.getUserById(id).subscribe(data => {
       this.userDetails = data;
-
-      console.log("User Detail of: ", data)
+      console.log("User Detail: ", data)
+      
     }, (error) => {
       console.log("Error occured while fetching user details", error.message)
     })
