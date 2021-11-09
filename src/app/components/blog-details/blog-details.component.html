@@ -1,32 +1,26 @@
 <section class="blog-details">
-  <div class="container">
-    <a href="/blogs">
-      <i class="fa fa-chevron-left btn btn-danger btn-sm" title="Go back"></i>
-    </a>
-    <hr />
-    <div class="row">
-      <div class="col-md-12">
-        <div class="thumbnail">
-          <img
-            class="img-responsive"
-            src="{{blogDetails.blogImage}}"
-            onError="this.src='https://via.placeholder.com/150/150'"
-            alt="{{blogDetails.title}}"
-          />
-          <div class="caption">
-            <h3>{{blogDetails.title}}</h3>
-            <p>{{blogDetails.body}}</p>
-
-            <hr />
-            <p>
-              <i class="fa fa-user-circle" title="Written by {{blogDetails.author}}" ></i>&nbsp; {{blogDetails.author}}
-            </p>
-            <p>
-              <i class="fa fa-calendar" title="Published on {{blogDetails.PublishedDate | date}}"></i>&nbsp; {{blogDetails.PublishedDate | date}}
-            </p>
-          </div>
+    <div class="container">
+        <a href="/blogs">
+            <i class="fa fa-chevron-left btn btn-danger btn-sm" title="Go back"></i>
+        </a>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="{{blogDetails.blogImage}}" onError="this.src='https://via.placeholder.com/150/150'" alt="{{blogDetails.title}}" />
+                    <div class="caption">
+                        <h3>{{blogDetails.title}}</h3>
+                        <p>{{blogDetails.body}}</p>
+                        <hr />
+                        <p>
+                            <i class="fa fa-user-circle" title="Written by {{blogDetails.author}}"></i>&nbsp; {{blogDetails.author}}
+                        </p>
+                        <p>
+                            <i class="fa fa-calendar" title="Published on {{blogDetails.PublishedDate | date}}"></i>&nbsp; {{blogDetails.PublishedDate | date}}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
