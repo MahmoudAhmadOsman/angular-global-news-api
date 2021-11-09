@@ -12,7 +12,7 @@ export class UserDetailsComponent implements OnInit {
  userDetails: any;
   
   constructor(private usersService: UsersService, private route: ActivatedRoute) { }
-
+  
   ngOnInit(): void {
     this.showUserDetails();
   }
@@ -28,9 +28,5 @@ export class UserDetailsComponent implements OnInit {
       console.log("Error occured while fetching user details", error.message)
     })
 }
-
-
-
-
 
 }
