@@ -1,47 +1,39 @@
 <section class="user_details_container">
-  <div class="container">
-    <a routerLink="/users" class="fa fa-chevron-left" title="Back"> </a>
-    <h3>
-      Details about
-      <small>{{userDetails.name}} with ID # {{userDetails.id}}</small>
-    </h3>
-    <hr />
-    <div class="row">
-      <div class="col-md-6">
-        <img
-          class="card-img-top thumbnail"
-          src="https://source.unsplash.com/720x480/?avatar"
-          alt="{{userDetails.name}}"
-          style="width: 480px;"
-        />
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <p class="card-title"><b>Full Name: </b>{{userDetails.name}}</p>
-            <p class="card-text"><b>Username: </b>{{userDetails.username}}</p>
-            <p class="card-text"><b>Email Address: </b>{{userDetails.email}}</p>
-            <p class="card-text">
-              <b>Street: </b>{{userDetails.address.street}}
-            </p>
-
-            <p class="card-text"><b>Suite: </b>{{userDetails.address.suite}}</p>
-            <p class="card-text"><b>City: </b>{{userDetails.address.city}}</p>
-            <p class="card-text">
-              <b>Zip Code: </b>{{userDetails.address.zipcode}}
-            </p>
-            <p class="card-text"><b>Phone: </b>{{userDetails.phone}}</p>
-            <p class="card-text">
-              <b>Website: </b
-              ><a href="{{userDetails.website}}">{{userDetails.website}}</a>
-            </p>
-
-            <p class="card-text">
-              <b>Company: </b>{{userDetails.company.name}}
-            </p>
-          </div>
+    <div class="container">
+        <a routerLink="/users" class="fa fa-chevron-left" title="Back"> </a>
+        <h3>
+            Details about
+            <small>{{userDetails.name}} with ID # {{userDetails.id}}</small>
+        </h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <img class="card-img-top thumbnail" src="https://source.unsplash.com/720x480/?avatar" alt="{{userDetails.name}}" style="width: 480px;" />
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title"><b>Full Name: </b>{{userDetails.name}}</p>
+                        <p class="card-text"><b>Username: </b>{{userDetails.username}}</p>
+                        <p class="card-text"><b>Email Address: </b>{{userDetails.email}}</p>
+                        <p class="card-text">
+                            <b>Street: </b>{{userDetails.address.street}}
+                        </p>
+                        <p class="card-text"><b>Suite: </b>{{userDetails.address.suite}}</p>
+                        <p class="card-text"><b>City: </b>{{userDetails.address.city}}</p>
+                        <p class="card-text">
+                            <b>Zip Code: </b>{{userDetails.address.zipcode}}
+                        </p>
+                        <p class="card-text"><b>Phone: </b>{{userDetails.phone}}</p>
+                        <p class="card-text">
+                            <b>Website: </b><a href="{{userDetails.website}}">{{userDetails.website}}</a>
+                        </p>
+                        <p class="card-text">
+                            <b>Company: </b>{{userDetails.company.name}}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
