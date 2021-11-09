@@ -1,82 +1,74 @@
 <section class="putlanland_list">
- 
     <div class="row" *ngFor="let state of states">
-      <div class="col-md-3">
-        <!-- Start of putland -->
-        <div class="thumbnail">
-          <img
-            class="img-responsive"
-            src="https://source.unsplash.com/1600x900/?fish"
-            alt="{{state.hirshabelle.anotherName}}"
-          />
-          <div class="caption">
-            <h3>
-              {{state.putland.stateName}}
-              <small>- Member State</small>
-            </h3>
-            <hr />
-            <p><b>Population</b>: {{state.putland.population | number}}</p>
-            <p><b>Main Sources</b>: {{state.putland.mainSources}}</p>
-            <p><b>Governor Name</b>: {{state.putland.governorName}}</p>
-            <p><b>Number of Ports</b>: {{state.putland.numberOfAirport}}</p>
-            <p><b>Number of Airports</b>: {{state.putland.numberOfAirport}}</p>
-            <p>
-              <b>Number Of Districts</b>: {{state.putland.numberOfDistrict+1}}
-            </p>
-            <p><b>Number Of Beaches</b>: {{state.putland.numberOfBeach}}</p>
-            <p><b>Number of Miles</b>: {{state.putland.milesSquare}} square</p>
-            <hr />
-            <!-- <pre><b></b>: {{state.putland | json }}</pre> -->
-
-            <button class="btn btn-primary">{{state.putland.id}}</button>
-          </div>
+        <div class="col-md-3">
+            <!-- Start of putland -->
+            <div class="thumbnail">
+                <img class="img-responsive" src="https://source.unsplash.com/1600x900/?fish" alt="{{state.hirshabelle.anotherName}}" />
+                <div class="caption">
+                    <h3>
+                        {{state.putland.stateName}}
+                        <small>- Member State</small>
+                    </h3>
+                    <hr />
+                    <p><b>Population</b>: {{state.putland.population | number}}</p>
+                    <p><b>Main Sources</b>: {{state.putland.mainSources}}</p>
+                    <p><b>Governor Name</b>: {{state.putland.governorName}}</p>
+                    <p><b>Number of Ports</b>: {{state.putland.numberOfAirport}}</p>
+                    <p><b>Number of Airports</b>: {{state.putland.numberOfAirport}}</p>
+                    <p>
+                        <b>Number Of Districts</b>: {{state.putland.numberOfDistrict+1}}
+                    </p>
+                    <p><b>Number Of Beaches</b>: {{state.putland.numberOfBeach}}</p>
+                    <p><b>Number of Miles</b>: {{state.putland.milesSquare}} square</p>
+                    <hr />
+                    <!-- <pre><b></b>: {{state.putland | json }}</pre> -->
+                    <button class="btn btn-primary">{{state.putland.id}}</button>
+                </div>
+            </div>
+            <!-- End of putland -->
         </div>
-        <!-- End of putland -->
-      </div>
-      <div class="col-md-9">
-        <h4>Names & Numbers of Districts of Putland State</h4>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>State Name</th>
-                <th>State Capital</th>
-                <th>Population</th>
-                <th>Main Resources</th>
-                <th>Governor Name</th>
-                <th># of Airports</th>
-                <th># of Districts</th>
-                <th># of Beaches</th>
-                <th># of Miles</th>
-                <th># of Rivers</th>
-                <th>State Budget</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  {{state.putland.stateName }}
-                </td>
-                <td>{{state.putland.capitalCity }}</td>
-                <td>
-                  {{state.putland.population | number}}
-                </td>
-                <td>{{state.putland.mainSources}}</td>
-
-                <td>{{state.putland.governorName}}</td>
-                <td>{{state.putland.numberOfAirport}}</td>
-                <td>{{state.putland.numberOfDistrict}}</td>
-                <td>{{state.putland.numberOfBeach}}</td>
-                <td>{{state.putland.milesSquare}}</td>
-                <td>{{state.putland.numberOfRivers}}</td>
-                <td class="text-danger">
-                  {{state.putland.budget | currency}}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-md-9">
+            <h4>Names & Numbers of Districts of Putland State</h4>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>State Name</th>
+                            <th>State Capital</th>
+                            <th>Population</th>
+                            <th>Main Resources</th>
+                            <th>Governor Name</th>
+                            <th># of Airports</th>
+                            <th># of Districts</th>
+                            <th># of Beaches</th>
+                            <th># of Miles</th>
+                            <th># of Rivers</th>
+                            <th>State Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                {{state.putland.stateName }}
+                            </td>
+                            <td>{{state.putland.capitalCity }}</td>
+                            <td>
+                                {{state.putland.population | number}}
+                            </td>
+                            <td>{{state.putland.mainSources}}</td>
+                            <td>{{state.putland.governorName}}</td>
+                            <td>{{state.putland.numberOfAirport}}</td>
+                            <td>{{state.putland.numberOfDistrict}}</td>
+                            <td>{{state.putland.numberOfBeach}}</td>
+                            <td>{{state.putland.milesSquare}}</td>
+                            <td>{{state.putland.numberOfRivers}}</td>
+                            <td class="text-danger">
+                                {{state.putland.budget | currency}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
     </div>
- 
 </section>
