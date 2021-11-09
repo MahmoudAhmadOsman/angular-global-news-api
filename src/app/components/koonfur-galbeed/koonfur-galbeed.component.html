@@ -1,99 +1,88 @@
 <section class="konfurgalbeed_list">
- 
     <div class="row" *ngFor="let state of states">
-      <div class="col-md-3">
-        <!-- Start of koonfur galbeed -->
-        <div class="thumbnail">
-          <img
-            class="img-responsive"
-            src="https://source.unsplash.com/1600x900/?corn"
-            alt="{{state.koonfurGalbeed.anotherName}}"
-          />
-          <div class="caption">
-            <h3>
-              {{state.koonfurGalbeed.stateName}}
-              <small>- Member State</small>
-            </h3>
-            <hr />
-            <small
-              ><b>Temporary Capital: </b
-              >{{state.koonfurGalbeed.anotherName}}</small
-            >
-            <p>
-              <b>Population</b>: {{state.koonfurGalbeed.population | number}}
-            </p>
-            <p><b>Main Sources</b>: {{state.koonfurGalbeed.mainSources}}</p>
-            <p><b>Governor Name</b>: {{state.koonfurGalbeed.governorName}}</p>
-            <p>
-              <b>Number of Ports</b>: {{state.koonfurGalbeed.numberOfAirport}}
-            </p>
-            <p>
-              <b>Number of Airports</b>:
-              {{state.koonfurGalbeed.numberOfAirport}}
-            </p>
-            <p>
-              <b>Number Of Districts</b>:
-              {{state.koonfurGalbeed.numberOfDistrict+1}}
-            </p>
-            <p>
-              <b>Number Of Beaches</b>: {{state.koonfurGalbeed.numberOfBeach}}
-            </p>
-            <p>
-              <b>Number of Miles</b>: {{state.koonfurGalbeed.milesSquare}}
-              square
-            </p>
-            <hr />
-            <!-- <pre><b></b>: {{state.koonfurGalbeed | json }}</pre> -->
-
-            <button class="btn btn-primary">{{state.koonfurGalbeed.id}}</button>
-          </div>
+        <div class="col-md-3">
+            <!-- Start of koonfur galbeed -->
+            <div class="thumbnail">
+                <img class="img-responsive" src="https://source.unsplash.com/1600x900/?corn" alt="{{state.koonfurGalbeed.anotherName}}" />
+                <div class="caption">
+                    <h3>
+                        {{state.koonfurGalbeed.stateName}}
+                        <small>- Member State</small>
+                    </h3>
+                    <hr />
+                    <small><b>Temporary Capital: </b>{{state.koonfurGalbeed.anotherName}}</small>
+                    <p>
+                        <b>Population</b>: {{state.koonfurGalbeed.population | number}}
+                    </p>
+                    <p><b>Main Sources</b>: {{state.koonfurGalbeed.mainSources}}</p>
+                    <p><b>Governor Name</b>: {{state.koonfurGalbeed.governorName}}</p>
+                    <p>
+                        <b>Number of Ports</b>: {{state.koonfurGalbeed.numberOfAirport}}
+                    </p>
+                    <p>
+                        <b>Number of Airports</b>:
+                        {{state.koonfurGalbeed.numberOfAirport}}
+                    </p>
+                    <p>
+                        <b>Number Of Districts</b>:
+                        {{state.koonfurGalbeed.numberOfDistrict+1}}
+                    </p>
+                    <p>
+                        <b>Number Of Beaches</b>: {{state.koonfurGalbeed.numberOfBeach}}
+                    </p>
+                    <p>
+                        <b>Number of Miles</b>: {{state.koonfurGalbeed.milesSquare}}
+                        square
+                    </p>
+                    <hr />
+                    <!-- <pre><b></b>: {{state.koonfurGalbeed | json }}</pre> -->
+                    <button class="btn btn-primary">{{state.koonfurGalbeed.id}}</button>
+                </div>
+            </div>
+            <!-- End of koonfur galbeed -->
         </div>
-        <!-- End of koonfur galbeed -->
-      </div>
-      <div class="col-md-9">
-        <h4>Names & Numbers of Districts of Koonfur Galbeed State</h4>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>State Name</th>
-                <th>State Capital</th>
-                <th>Population</th>
-                <th>Main Resources</th>
-                <th>Governor Name</th>
-                <th># of Airports</th>
-                <th># of Districts</th>
-                <th># of Beaches</th>
-                <th># of Miles</th>
-                <th># of Rivers</th>
-                <th>State Budget</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  {{state.koonfurGalbeed.stateName }}
-                </td>
-                <td>{{state.koonfurGalbeed.capitalCity }}</td>
-                <td>
-                  {{state.koonfurGalbeed.population | number}}
-                </td>
-                <td>{{state.koonfurGalbeed.mainSources}}</td>
-
-                <td>{{state.koonfurGalbeed.governorName}}</td>
-                <td>{{state.koonfurGalbeed.numberOfAirport}}</td>
-                <td>{{state.koonfurGalbeed.numberOfDistrict}}</td>
-                <td>{{state.koonfurGalbeed.numberOfBeach}}</td>
-                <td>{{state.koonfurGalbeed.milesSquare}}</td>
-                <td>{{state.koonfurGalbeed.numberOfRivers}}</td>
-                <td class="text-danger">
-                  {{state.koonfurGalbeed.budget | currency}}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-md-9">
+            <h4>Names & Numbers of Districts of Koonfur Galbeed State</h4>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>State Name</th>
+                            <th>State Capital</th>
+                            <th>Population</th>
+                            <th>Main Resources</th>
+                            <th>Governor Name</th>
+                            <th># of Airports</th>
+                            <th># of Districts</th>
+                            <th># of Beaches</th>
+                            <th># of Miles</th>
+                            <th># of Rivers</th>
+                            <th>State Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                {{state.koonfurGalbeed.stateName }}
+                            </td>
+                            <td>{{state.koonfurGalbeed.capitalCity }}</td>
+                            <td>
+                                {{state.koonfurGalbeed.population | number}}
+                            </td>
+                            <td>{{state.koonfurGalbeed.mainSources}}</td>
+                            <td>{{state.koonfurGalbeed.governorName}}</td>
+                            <td>{{state.koonfurGalbeed.numberOfAirport}}</td>
+                            <td>{{state.koonfurGalbeed.numberOfDistrict}}</td>
+                            <td>{{state.koonfurGalbeed.numberOfBeach}}</td>
+                            <td>{{state.koonfurGalbeed.milesSquare}}</td>
+                            <td>{{state.koonfurGalbeed.numberOfRivers}}</td>
+                            <td class="text-danger">
+                                {{state.koonfurGalbeed.budget | currency}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
     </div>
-  
 </section>
