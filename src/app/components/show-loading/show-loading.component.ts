@@ -13,7 +13,3 @@ export class ShowLoadingComponent implements OnInit {
   }
 
 }
- /*
- 
- <app-show-loading></app-show-loading>
- */
