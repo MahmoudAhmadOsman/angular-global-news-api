@@ -8,8 +8,6 @@ import { StateService } from 'src/app/services/state.service';
 })
 export class JubalandComponent implements OnInit {
 
-  
-
   public states: [];
 
   constructor(private jubaland: StateService) {
@@ -22,12 +20,6 @@ export class JubalandComponent implements OnInit {
     })
 
   }
-
-
-
-
-
-
 
   ngOnInit(): void {
   }
