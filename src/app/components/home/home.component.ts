@@ -24,17 +24,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  //Pramiterized Router
-
-
-
- 
- 
-
-
-
-
-
   ngOnInit(): void {
     // console.log("Pramiterized Router: ", this.route.snapshot.params['title'])
     // const title = this.route.snapshot.params['title'];
