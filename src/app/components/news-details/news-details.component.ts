@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsDetailsComponent implements OnInit {
 
-  public newsDetails: any;
+ public newsDetails: any;
  public errorMessage: [];
+  
   constructor(private route: ActivatedRoute, private newsapi: NewsapiService) { }
 
   ngOnInit(): void {
