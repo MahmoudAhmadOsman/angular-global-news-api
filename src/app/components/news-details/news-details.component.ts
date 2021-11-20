@@ -16,6 +16,7 @@ export class NewsDetailsComponent implements OnInit {
   ngOnInit(): void {
     console.log("Pramiterized Router: ", this.route.snapshot.params['id'])
    
+    //Get blog details by its id
     const id = this.route.snapshot.params['id'];
 
     this.newsapi.getNewsByTitle(id).subscribe(async data => {
