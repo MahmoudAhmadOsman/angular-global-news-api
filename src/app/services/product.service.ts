@@ -12,7 +12,7 @@ export class ProductService {
 
 
   getAllProducts(): Observable<any> {
-      const baseUrl = "https://custom-states-api.herokuapp.com/products";
+      const baseUrl = "https://stapes-api.onrender.com/products";
     return this.http.get(baseUrl);
   
 }
