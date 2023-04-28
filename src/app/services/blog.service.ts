@@ -11,7 +11,7 @@ export class BlogService {
 
 //Gell All Blogs
   getAllBlogs(): Observable<any>{
-    const blogURL = "https://blogs-api.herokuapp.com/blogs/";
+    const blogURL = "https://stapes-api.onrender.com/blogs/";
     return this.http.get(blogURL);
   }
   
