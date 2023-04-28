@@ -10,7 +10,7 @@ export class StateService {
 
   constructor(private http: HttpClient) { }
   getAllStates(): Observable<any>{
-    const baseUrl = "https://custom-states-api.herokuapp.com/states/";
+    const baseUrl = "https://stapes-api.onrender.com/states/";
     return this.http.get(baseUrl);
 
 }
